@@ -1,6 +1,6 @@
 :root {
     --primary-color: #3498db;
-    --secondary-color: #2ecc71;
+    --secondary-color: #0011fa;
 }
 *{
     box-sizing: border-box;
@@ -73,18 +73,22 @@ main section div {
 .card {
     width: 412px;
     height: 542px;
-    background: #2ecc71;
+    background: #88002b;
     border-radius: 40px;
-    box-shadow: rgba(0, 255, 110, 0.4) 5px 5px, rgba(0, 255, 81, 0.3) 10px 10px, rgba(72, 255, 0, 0.2) 15px 15px, rgba(9, 255, 0, 0.1) 20px 20px, rgba(0, 255, 60, 0.05) 25px 25px;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(74, 74, 74, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
     transition: 
     box-shadow 1s ease-in-out,
     transform 0.8s ease-in-out;
     overflow: hidden;
+
+    & h2 {
+        color: azure;
+    }
 }
 
 .card:hover{
     transform: translateY(-5px);
-    box-shadow: rgba(0, 255, 110, 0.4) 15px 15px, rgba(0, 255, 81, 0.3) 20px 20px, rgba(72, 255, 0, 0.2) 25px 25px, rgba(9, 255, 0, 0.1) 30px 30px, rgba(0, 255, 60, 0.05) 35px 35px;
+    box-shadow: rgba(4, 0, 114, 0.4) 15px 15px, rgba(255, 0, 0, 0.3) 20px 20px, rgba(255, 0, 0, 0.2) 25px 25px, rgba(255, 0, 0, 0.1) 30px 30px, rgba(255, 0, 0, 0.05) 35px 35px;
 }
 .card-content{
     display: flex;
@@ -111,9 +115,9 @@ hr {
 }
 
 .card-content img {
-    width: 200px;
+    width: 180px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 40%;
     transition: all 1s ease-in-out;
 }
 
@@ -123,6 +127,12 @@ hr {
 }
 
 .card-footer img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+}
+.card-footer #redes {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
 }

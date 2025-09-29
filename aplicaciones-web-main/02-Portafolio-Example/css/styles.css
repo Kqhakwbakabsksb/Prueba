@@ -2,7 +2,8 @@
     --primary-color: #3498db;
     --secondary-color: #0011fa;
 }
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -17,7 +18,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    
+
     & nav {
         display: flex;
         flex-direction: row;
@@ -27,10 +28,10 @@ body {
         padding: 0 20px 0 20px;
 
         & h2 {
-         font-size: 14px;
+            font-size: 14px;
         }
 
-        & a{
+        & a {
             text-decoration: none;
             color: var(--secondary-color);
             font-size: 14px;
@@ -45,7 +46,7 @@ body {
     }
 
     & span:nth-child(1) {
-      color: var(--secondary-color);
+        color: var(--secondary-color);
     }
 
     & span:nth-child(2) {
@@ -55,12 +56,14 @@ body {
 }
 
 main section {
-   min-height: 100vh;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   align-items: center;
-   justify-content: center;
-   margin: 0 auto;
+
+    min-height: 100vh;
+    padding: 80px 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 main section div {
@@ -76,9 +79,9 @@ main section div {
     background: #88002b;
     border-radius: 40px;
     box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(74, 74, 74, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
-    transition: 
-    box-shadow 1s ease-in-out,
-    transform 0.8s ease-in-out;
+    transition:
+        box-shadow 1s ease-in-out,
+        transform 0.8s ease-in-out;
     overflow: hidden;
 
     & h2 {
@@ -86,18 +89,20 @@ main section div {
     }
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-5px);
-    box-shadow: rgba(4, 0, 114, 0.4) 15px 15px, rgba(255, 0, 0, 0.3) 20px 20px, rgba(255, 0, 0, 0.2) 25px 25px, rgba(255, 0, 0, 0.1) 30px 30px, rgba(255, 0, 0, 0.05) 35px 35px;
+    box-shadow: rgba(1, 0, 30, 0.4) 15px 15px, rgba(0, 0, 0, 0.3) 20px 20px, rgba(0, 0, 0, 0.2) 25px 25px, rgba(0, 0, 0, 0.1) 30px 30px, rgba(255, 0, 0, 0.05) 35px 35px;
 }
-.card-content{
+
+.card-content {
     display: flex;
     flex-direction: column;
     gap: 30px;
     flex-grow: 1;
     text-transform: uppercase;
 }
-.card-footer{
+
+.card-footer {
     height: 76px;
     width: 100%;
     background-color: white;
@@ -122,7 +127,7 @@ hr {
 }
 
 .card-content img:hover {
-    filter: drop-shadow( 0 10px 20px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
     transition: all 1s ease-in-out;
 }
 
@@ -130,9 +135,138 @@ hr {
     width: 40px;
     height: 40px;
 }
+
 .card-footer #redes {
     display: flex;
     flex-direction: row;
     gap: 15px;
     align-items: center;
 }
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+}
+
+article h2 {
+    font-size: 60px;
+    white-space: pre-line;
+    margin-bottom: 10px;
+}
+
+article h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+article p {
+    font-size: 23px;
+    line-height: 32px;
+    margin-bottom: 15px;
+    text-wrap: pretty;
+}
+
+aside {
+    margin: 30px 0;
+}
+
+article a {
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 20px;
+}
+
+article a:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 40px;
+    background: #3498db;
+    color: white;
+}
+
+@media (max-width: 550px) {
+    main section {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    main section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 80px 20px 40px;
+    }
+    
+    .card {
+        width: 350px;
+        height: 480px;
+    }
+    
+    article {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    article h2 {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    main section {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 80px 15px 40px;
+    }
+    
+    .card {
+        width: 300px;
+        height: 430px;
+    }
+    
+    .card-content img {
+        width: 150px;
+    }
+    
+    article h2 {
+        font-size: 32px;
+    }
+    
+    article p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    
+    #menu nav {
+        padding: 0 15px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .card {
+        width: 280px;
+        height: 400px;
+    }
+    
+    article h2 {
+        font-size: 28px;
+    }
+}
+
+

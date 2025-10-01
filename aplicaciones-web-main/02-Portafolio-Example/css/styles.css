@@ -269,4 +269,52 @@ footer {
     }
 }
 
+/* División con efecto de gradiente para separar las secciones visualmente */
+.division-rayita {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    margin: 40px auto;
+    border: none;
+}
+
+/* Scroll suave a la seccion de proyectos */
+#proyectos {
+   scroll-behavior: smooth;
+}
+
+/* Grid responsive para mostrar los proyectos de forma ordenada */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Tarjetas de proyectos con sombras y efectos hover */
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el mouse sobre las tarjetas */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*  Títulos de las tarjetas con el color secundario */
+.project-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Estilo del texto descriptivo de los proyectos */
+.project-card p {
+    color: #202020;
+    line-height: 1.5;
+}
 
